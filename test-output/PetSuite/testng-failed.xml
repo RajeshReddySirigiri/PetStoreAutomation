@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [PetSuite]" parallel="none">
+  <listeners>
+    <listener class-name="api.utilities.ExtentReportManager"/>
+  </listeners>
+  <test thread-count="5" name="PetTests">
+    <classes>
+      <class name="api.test.UserTests2"/>
+    </classes>
+  </test> <!-- PetTests -->
+  <test name="PetTests(failed)" parallel="none">
+    <classes>
+      <class name="api.test.UserTests2">
+        <methods>
+          <include name="testUpdateUser"/>
+          <include name="testPostUser"/>
+          <include name="setUpData"/>
+          <include name="testGetUser"/>
+          <include name="testDeleteUser"/>
+        </methods>
+      </class> <!-- api.test.UserTests2 -->
+    </classes>
+  </test> <!-- PetTests(failed) -->
+</suite> <!-- Failed suite [PetSuite] -->
